@@ -1,0 +1,491 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Karla', sans-serif;
+    overflow-x: hidden;
+    /* font-family: 'DM Serif Display', serif; */
+}
+
+nav {
+    padding: 1rem 4rem;
+    position: relative;
+    z-index: 3;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: relative;
+}
+
+.mobile-nav img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+}
+
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+    color: hsl(273, 4%, 51%);
+}
+
+.nav-items li:hover {
+    color: hsl(270, 9%, 17%);
+}
+
+li {
+    margin-left: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+li:last-child {
+    margin-left: 2rem;
+    color: hsl(270, 9%, 17%);
+    border: 2px solid hsl(270, 9%, 17%);
+    padding: 0.7rem 1.5rem;
+    transition: .3s ease-in-out;
+}
+
+li:last-child:hover {
+    
+    background-color: hsl(270, 9%, 17%);
+    color: white;
+    border: 2px solid white;
+    padding: 0.7rem 1.5rem;
+} 
+
+.hero {
+    /* position: relative; */
+    padding: 4rem;
+    height: 100vh;
+    background-color: hsl(256, 26%, 20%);
+    display: flex;
+}
+
+.hero .pattern-right {
+    position: absolute;
+    right: -1rem;
+    top: -2rem;
+    z-index: 2;
+    transform: rotate(-25deg);
+}
+
+.hero .pattern-left {
+    position: absolute;
+    transform: scale(0.8);
+    left: -1.5rem;
+    bottom: -25rem;
+    z-index: 2;
+}
+
+.hero .pattern-mob-right {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -45rem;
+}
+
+.hero .pattern-mob-left {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: -19.85rem;
+}
+
+.intro {
+    margin-top: 2rem;
+    width: 50%;
+    color: white;
+    float: left;
+}
+
+.intro hr{
+    margin-bottom: 3rem;
+    width: 30%;
+}
+
+.intro h1 {
+    font-size: 4.5rem;
+    font-family: 'DM Serif Display', serif;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    margin-bottom: 3rem;
+}
+
+.intro .plan {
+    text-decoration: none;
+    margin-top: 3rem;
+    color: white;
+    border: 2px solid white;
+    padding: 0.7rem 1.5rem;
+    transition: .3s ease-in-out;
+}
+
+.intro .plan:hover {
+    background-color: white;
+    color: hsl(270, 9%, 17%);
+    border: 2px solid hsl(270, 9%, 17%);
+    padding: 0.7rem 1.5rem;
+}
+
+.intro-img {
+    margin-top: 1.8rem;
+}
+
+.hr-between {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    width: 20%;
+    background-color: hsl(270, 9%, 17%);
+}
+
+.different {
+    padding: 4rem;
+}
+
+.different h1 {
+    font-size: 4.5rem;
+    font-family: 'DM Serif Display', serif;
+    letter-spacing: 0.1rem;
+    color: hsl(256, 26%, 20%);
+}
+
+.features {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+}
+
+.feature-1, .feature-2, .feature-3 {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.features img {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.features h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: hsl(256, 26%, 20%);
+    font-family: 'DM Serif Display', serif;
+}
+
+.features p {
+    color: hsl(273, 4%, 51%);
+}
+
+.work {
+    display: flex;
+    position: relative;
+    padding: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(256, 26%, 20%);
+    margin-bottom: 5rem;
+}
+
+.work-pattern {
+    position: absolute;
+    right: 0;
+}
+
+.work-pattern-mob {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.work h1 {
+    color: white;
+    width: 60%;
+    font-size: 3rem;
+    z-index: 2;
+}
+
+.work span {
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+    border: 2px solid white;
+    padding: 0.7rem 1.5rem;
+    transition: .3s ease-in-out;
+}
+
+.work span:hover {
+    background-color: white;
+    color: hsl(270, 9%, 17%);
+    border: 2px solid hsl(270, 9%, 17%);
+    padding: 0.7rem 1.5rem;
+}
+
+footer {
+    padding: 4rem;
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+    z-index: 1;
+}
+
+.pattern-foot {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.upper-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo-foot {
+    height: 100%;
+}
+
+.icons img{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+footer hr {
+    background-color: hsl(273, 4%, 51%);
+    margin-top: 2rem;
+}
+
+.lower-footer {
+    margin-top: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.lower-footer h1 {
+    color: hsl(273, 4%, 51%);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.lower-footer p {
+    color: hsl(256, 26%, 20%);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* MOBILE DESIGN */
+
+@media screen and (max-width: 767px) {
+
+    /* MOBILE NAV */
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    .remove-content {
+        display: none;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .mobile-nav {
+        height: 100vh;
+        padding: 1rem;
+        background-color: hsl(270, 9%, 17%);
+    }
+
+    .mob-nav-items {
+        margin-top: 2rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .mob-nav-items li {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .mob-nav-items li:last-child {
+        margin-left: 0;
+        cursor: pointer;
+        z-index: 2;
+        color: white;
+        border: 2px solid white;
+        padding: 0.7rem 1.5rem;
+        transition: .3s ease-in-out;
+    }
+
+    .mob-nav-items li:last-child:hover {
+        background-color: white;
+        color: hsl(270, 9%, 17%);
+        border: 2px solid hsl(270, 9%, 17%);
+    }
+
+    .show-mob-nav {
+        display: block;
+    }
+    /* END MOBILE NAV */
+
+    .hero {
+        flex-direction: column;
+        height: fit-content;
+        padding: 0;
+        text-align: center;
+    }
+
+    .intro {
+        width: 100%;
+        padding: 3rem 3rem 5rem 3rem;
+        line-height: 1.5;
+    }
+
+    .intro hr{
+       display: none;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro-img {
+        order: -1;
+        margin: 0;
+    }
+
+    .pattern-left, .pattern-right {
+        display: none;
+    }
+
+    .hero .pattern-mob-left {
+        display: block;
+    }
+
+    .hero .pattern-mob-right  {
+        display: block;
+    } 
+
+    .different {
+        text-align: center;
+    }
+
+    .different hr {
+        width: 50%;
+        margin: 2rem auto;
+    }
+
+    .different h1 {
+        font-size: 3rem;
+    }
+
+    .features {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .features h1 {
+        font-size: 2rem;
+    }
+
+
+    .feature-1, .feature-2, .feature-3 {
+        margin-top: 2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .features img {
+        width: 30;
+        margin: 1rem auto;
+    }
+
+    .work {
+        display: flex;
+        position: relative;
+        padding: 3rem 3rem 5rem 3rem;
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    .work h1 {
+        font-size: 2rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .work-pattern {
+        display: none;
+    }
+
+    .work-pattern-mob {
+        display: block;
+    }
+
+    footer {
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .upper-footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .upper-footer .logo-foot {
+        width: 50%;
+        margin: 2rem auto;
+    }
+
+    .lower-footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
